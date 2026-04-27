@@ -24,6 +24,7 @@ The narration positions the NTPC Procurement Agent as an AI decision cockpit for
 2. insight generation across coal companies, grades, quantities, freight, risk, and landed-cost exposure
 3. ground-scenario simulation for disruption, demand surge, freight bottlenecks, rake unavailability, dispatch delay, and quality variation
 4. optimized coal procurement recommendations balancing cost, availability, reliability, inventory cover, and route feasibility
+5. power-generation forecasting from coal availability with automatic supplier and plant notifications
 
 ## Runtime
 
