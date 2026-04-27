@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VIDEO="assets/ntpc-procurement-agent-demo-fast.mp4"
+SOURCE_VIDEO="assets/ntpc-procurement-agent-demo-fast.mp4"
+SLOWED_VIDEO="assets/ntpc-procurement-agent-demo-65pct-speed.mp4"
 AUDIO="assets/demo-narration.mp3"
 OUTPUT="assets/ntpc-procurement-agent-demo-narrated.mp4"
+SPEED_REDUCTION_PERCENT="35"
 
 if command -v ffmpeg >/dev/null 2>&1; then
   FFMPEG_BIN="$(command -v ffmpeg)"
@@ -24,8 +26,23 @@ PY
   }
 fi
 
+SPEED_FACTOR="$(python - "$SPEED_REDUCTION_PERCENT" <<'PY'
+import sys
+reduction = float(sys.argv[1])
+print(f"{1/(1-reduction/100):.6f}")
+PY
+)"
+
+echo "Creating slowed video at 65% speed (${SPEED_REDUCTION_PERCENT}% slower)..."
 "$FFMPEG_BIN" -y \
-  -i "$VIDEO" \
+  -i "$SOURCE_VIDEO" \
+  -an \
+  -filter:v "setpts=${SPEED_FACTOR}*PTS" \
+  "$SLOWED_VIDEO"
+
+echo "Muxing slowed video with narration..."
+"$FFMPEG_BIN" -y \
+  -i "$SLOWED_VIDEO" \
   -i "$AUDIO" \
   -map 0:v:0 -map 1:a:0 \
   -c:v copy \

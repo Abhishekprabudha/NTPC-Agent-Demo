@@ -11,6 +11,7 @@ DEFAULT_TEXT_FILE = Path("assets/narration.txt")
 DEFAULT_OUTPUT_FILE = Path("assets/demo-narration.mp3")
 DEFAULT_VOICE = "en-GB-LibbyNeural"
 DEFAULT_ESPEAK_VOICE = "en-gb+f3"
+DEFAULT_TARGET_DURATION_SECONDS = 138.5
 
 
 async def generate_edge_tts(text: str, output_file: Path, voice: str, rate: str) -> None:
@@ -21,7 +22,7 @@ async def generate_edge_tts(text: str, output_file: Path, voice: str, rate: str)
     await communicator.save(str(output_file))
 
 
-def generate_espeak(text: str, output_file: Path, voice: str, speed_wpm: int) -> None:
+def generate_espeak(text: str, output_file: Path, voice: str, speed_wpm: int, target_duration_seconds: float) -> None:
     output_file.parent.mkdir(parents=True, exist_ok=True)
     raw_wav = output_file.with_suffix(".raw.wav")
     raw_mp3 = output_file.with_name(output_file.stem + "-raw.mp3")
@@ -35,7 +36,7 @@ def generate_espeak(text: str, output_file: Path, voice: str, speed_wpm: int) ->
     subprocess.run(["ffmpeg", "-y", "-i", str(raw_wav), "-codec:a", "libmp3lame", "-q:a", "2", str(raw_mp3)], check=True)
     subprocess.run([
         "ffmpeg", "-y", "-i", str(raw_mp3),
-        "-af", "apad=pad_dur=90,atrim=0:90,asetpts=N/SR/TB,loudnorm=I=-16:TP=-1.5:LRA=11",
+        "-af", f"apad=pad_dur={target_duration_seconds},atrim=0:{target_duration_seconds},asetpts=N/SR/TB,loudnorm=I=-16:TP=-1.5:LRA=11",
         "-codec:a", "libmp3lame", "-q:a", "2", str(output_file)
     ], check=True)
 
@@ -48,9 +49,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--text-file", type=Path, default=DEFAULT_TEXT_FILE)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT_FILE)
     parser.add_argument("--voice", default=DEFAULT_VOICE)
-    parser.add_argument("--rate", default="+0%", help="Speech rate for Edge TTS, e.g. -5%% or +0%%")
+    parser.add_argument("--rate", default="-10%", help="Speech rate for Edge TTS, e.g. -5%% or +0%%")
     parser.add_argument("--fallback-voice", default=DEFAULT_ESPEAK_VOICE)
-    parser.add_argument("--fallback-speed", type=int, default=150)
+    parser.add_argument("--fallback-speed", type=int, default=140)
+    parser.add_argument("--target-duration", type=float, default=DEFAULT_TARGET_DURATION_SECONDS)
     parser.add_argument(
         "--allow-fallback",
         action="store_true",
@@ -78,7 +80,7 @@ def main() -> None:
             )
         print(f"Edge TTS unavailable, falling back to eSpeak: {exc}")
 
-    generate_espeak(text, args.output, args.fallback_voice, args.fallback_speed)
+    generate_espeak(text, args.output, args.fallback_voice, args.fallback_speed, args.target_duration)
     print(f"Generated {args.output} using eSpeak voice {args.fallback_voice}")
 
 
