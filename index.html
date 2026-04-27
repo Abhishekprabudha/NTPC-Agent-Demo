@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NTPC Procurement Agent × AIonOS Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AIonOS Demo Package</p>
+        <h1>NTPC Procurement Agent</h1>
+        <p class="lede">
+          A 90-second narrated walkthrough of coal procurement dashboards, supplier insights,
+          ground-scenario simulation, and optimized procurement planning.
+        </p>
+      </div>
+      <div class="runtime">
+        <span>Runtime</span>
+        <strong>01:30</strong>
+      </div>
+    </section>
+
+    <section class="player-card">
+      <video id="demoVideo" controls playsinline poster="" preload="metadata">
+        <source src="assets/ntpc-procurement-agent-demo-narrated.mp4" type="video/mp4" />
+      </video>
+
+      <div class="controls">
+        <button id="playNarrated">Play narrated demo</button>
+        <button id="restart">Restart</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article>
+        <h2>What the agent shows</h2>
+        <ul>
+          <li>Procurement, inventory, transport, and supplier dashboards in one cockpit.</li>
+          <li>Company-wise coal sourcing options, cost exposure, and delivery reliability.</li>
+          <li>Simulation of disruption, demand surge, freight bottlenecks, and dispatch delay.</li>
+          <li>Optimized procurement mix balancing cost, availability, reliability, and route feasibility.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Included assets</h2>
+        <ul>
+          <li>Fast-paced silent video: <code>assets/ntpc-procurement-agent-demo-fast.mp4</code></li>
+          <li>Narration MP3: <code>assets/demo-narration.mp3</code></li>
+          <li>Final narrated MP4: <code>assets/ntpc-procurement-agent-demo-narrated.mp4</code></li>
+          <li>Editable narration script: <code>assets/narration.txt</code></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
