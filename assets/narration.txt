@@ -1,0 +1,9 @@
+Welcome to the AIonOS NTPC Procurement Agent: a decision cockpit for coal sourcing, landed-cost visibility, and procurement optimization.
+
+The agent begins by converting fragmented procurement, supplier, transport, and inventory data into one operational dashboard. Instead of reviewing static reports, the user can see demand, stock positions, coal availability, company-wise supply options, delivery routes, risk signals, and cost impact in one place.
+
+The next layer is insight generation. The system compares coal companies, grades, quantities, freight movement, delivery reliability, and price exposure. It highlights where procurement is efficient, where supply is constrained, and where the current plan may create cost leakage or shortage risk.
+
+Now the simulation engine takes over. Users can test ground scenarios such as supplier disruption, higher demand, freight bottlenecks, rake unavailability, delayed dispatch, quality variation, or regional supply pressure. Each scenario recalculates the recommended procurement mix and shows the operational and financial impact immediately.
+
+Finally, the agent recommends an optimized coal procurement plan. It balances cost, availability, reliability, inventory cover, and route feasibility, while keeping decision-makers in control. The outcome is faster planning, clearer risk visibility, and a procurement process that moves from reactive reporting to AI-assisted, scenario-driven optimization.
