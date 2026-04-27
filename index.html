@@ -13,8 +13,8 @@
         <p class="eyebrow">AIonOS Demo Package</p>
         <h1>NTPC Procurement Agent</h1>
         <p class="lede">
-          A 90-second narrated walkthrough of coal procurement dashboards, supplier insights,
-          ground-scenario simulation, and optimized procurement planning.
+          A 90-second narrated walkthrough of SAP-backed procurement dashboards, supplier insights,
+          scenario simulation, procurement optimization, and power-generation forecasting.
         </p>
       </div>
       <div class="runtime">
@@ -28,20 +28,29 @@
         <source src="assets/ntpc-procurement-agent-demo-narrated.mp4" type="video/mp4" />
       </video>
 
+      <audio id="narrationAudio" preload="auto">
+        <source src="assets/demo-narration.mp3" type="audio/mpeg" />
+      </audio>
+
       <div class="controls">
         <button id="playNarrated">Play narrated demo</button>
         <button id="restart">Restart</button>
+        <button id="toggleNarration" class="secondary">Narration: On</button>
       </div>
+
+      <p id="narrationStatus" class="status">
+        Narration fallback is enabled: if the MP4 audio track is missing or muted, the MP3 narration is played in sync.
+      </p>
     </section>
 
     <section class="grid">
       <article>
         <h2>What the agent shows</h2>
         <ul>
-          <li>Procurement, inventory, transport, and supplier dashboards in one cockpit.</li>
-          <li>Company-wise coal sourcing options, cost exposure, and delivery reliability.</li>
-          <li>Simulation of disruption, demand surge, freight bottlenecks, and dispatch delay.</li>
-          <li>Optimized procurement mix balancing cost, availability, reliability, and route feasibility.</li>
+          <li>Unified SAP cockpit for procurement, inventory, contracts, quality, and logistics.</li>
+          <li>Company-wise sourcing insights across grade, quantity, reliability, and landed cost.</li>
+          <li>Scenario simulation for dispatch delays, rake shortages, quality shifts, and demand surge.</li>
+          <li>Optimized sourcing mix plus generation forecasting with supplier and plant notifications.</li>
         </ul>
       </article>
 
