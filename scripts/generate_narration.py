@@ -51,6 +51,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--rate", default="+0%", help="Speech rate for Edge TTS, e.g. -5%% or +0%%")
     parser.add_argument("--fallback-voice", default=DEFAULT_ESPEAK_VOICE)
     parser.add_argument("--fallback-speed", type=int, default=150)
+    parser.add_argument(
+        "--allow-fallback",
+        action="store_true",
+        help="Allow fallback to eSpeak when Edge TTS is unavailable (robotic voice).",
+    )
     return parser.parse_args()
 
 
@@ -65,6 +70,12 @@ def main() -> None:
         print(f"Generated {args.output} using Edge TTS voice {args.voice}")
         return
     except Exception as exc:
+        if not args.allow_fallback:
+            raise SystemExit(
+                "Edge TTS failed and fallback is disabled to avoid robotic narration.\n"
+                "Install/verify edge-tts and rerun, or pass --allow-fallback to use eSpeak.\n"
+                f"Original error: {exc}"
+            )
         print(f"Edge TTS unavailable, falling back to eSpeak: {exc}")
 
     generate_espeak(text, args.output, args.fallback_voice, args.fallback_speed)

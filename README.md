@@ -44,7 +44,16 @@ Update `assets/narration.txt`, then run:
 python scripts/generate_narration.py
 ```
 
-The script defaults to a British female narration voice (`en-GB-LibbyNeural`) when `edge-tts` is available, and falls back to a female-leaning British eSpeak voice (`en-gb+f3`) with `ffmpeg`.
+The script defaults to a British female narration voice (`en-GB-LibbyNeural`) using `edge-tts`.
+If `edge-tts` is unavailable or fails, the script now exits by default (to avoid robotic narration in deliverables).
+
+If you explicitly want a fallback robotic track, run:
+
+```bash
+python scripts/generate_narration.py --allow-fallback
+```
+
+This fallback uses a female-leaning British eSpeak voice (`en-gb+f3`) with `ffmpeg`.
 
 ## Re-render narrated MP4
 
@@ -57,3 +66,9 @@ The renderer muxes the fast video with `assets/demo-narration.mp3` and writes:
 ```text
 assets/ntpc-procurement-agent-demo-narrated.mp4
 ```
+
+## GitHub Actions automation
+
+- On merge/push to `main`, changing `assets/narration.txt` or `scripts/generate_narration.py` triggers `.github/workflows/generate-narration.yml` to regenerate `assets/demo-narration.mp3` with Edge TTS.
+- When `assets/demo-narration.mp3` changes on `main`, `.github/workflows/render-narrated-mp4.yml` triggers to regenerate `assets/ntpc-procurement-agent-demo-narrated.mp4`.
+- Both workflows are also available via manual `workflow_dispatch`.

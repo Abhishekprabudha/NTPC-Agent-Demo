@@ -1,6 +1,13 @@
 name: Generate narration audio
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - assets/narration.txt
+      - scripts/generate_narration.py
+      - .github/workflows/generate-narration.yml
   workflow_dispatch:
 
 permissions:
@@ -11,8 +18,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
       - name: Install audio tools
-        run: sudo apt-get update && sudo apt-get install -y espeak ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg espeak
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip edge-tts
       - name: Generate narration
         run: python scripts/generate_narration.py
       - name: Commit changes

@@ -1,6 +1,13 @@
 name: Render narrated MP4
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - assets/demo-narration.mp3
+      - scripts/render_narrated_mp4.sh
+      - .github/workflows/render-narrated-mp4.yml
   workflow_dispatch:
 
 permissions:
