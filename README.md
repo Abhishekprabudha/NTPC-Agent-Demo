@@ -44,7 +44,7 @@ Update `assets/narration.txt`, then run:
 python scripts/generate_narration.py
 ```
 
-The script prefers `edge-tts` if available and falls back to local `espeak` + `ffmpeg`.
+The script defaults to a British female narration voice (`en-GB-LibbyNeural`) when `edge-tts` is available, and falls back to a female-leaning British eSpeak voice (`en-gb+f3`) with `ffmpeg`.
 
 ## Re-render narrated MP4
 

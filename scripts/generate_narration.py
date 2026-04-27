@@ -9,8 +9,8 @@ from pathlib import Path
 
 DEFAULT_TEXT_FILE = Path("assets/narration.txt")
 DEFAULT_OUTPUT_FILE = Path("assets/demo-narration.mp3")
-DEFAULT_VOICE = "en-GB-SoniaNeural"
-DEFAULT_ESPEAK_VOICE = "en-gb"
+DEFAULT_VOICE = "en-GB-LibbyNeural"
+DEFAULT_ESPEAK_VOICE = "en-gb+f3"
 
 
 async def generate_edge_tts(text: str, output_file: Path, voice: str, rate: str) -> None:
