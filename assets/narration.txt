@@ -1,8 +1,4 @@
-Welcome to NTPC GenBI v3.0, an intelligent business intelligence and procurement optimization platform built to support AI-powered coal procurement and energy planning.
-
-This solution is designed around NTPC’s core operational challenge: how to plan coal procurement more accurately, reduce landed cost, maintain reliable stock levels, and support plant-level power generation requirements through data-driven intelligence.
-
-The platform begins with a secure login, ensuring that only authorized users can access procurement dashboards, coal quality insights, optimization models, and AI-powered decision support.
+Welcome to NTPC Dashboard.
 
 Dashboard Overview
 
