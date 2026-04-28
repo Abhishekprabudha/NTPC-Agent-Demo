@@ -71,7 +71,3 @@ Instead of only analyzing historical data, the platform uses forecasting models 
 The model accuracy section provides confidence that the system is not just generating generic BI responses, but is being evaluated with measurable statistical performance.
 
 The procurement calendar view represents another practical planning layer.
-
-It allows NTPC teams to see procurement recommendations on a day-wise basis.
-
-Overall, the video demonstrates a working version of the NTPC coal procurement and energy planning.
