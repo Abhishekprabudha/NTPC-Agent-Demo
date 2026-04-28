@@ -60,16 +60,6 @@ This is not a simple lowest-price calculation.
 
 For NTPC, this means procurement teams can simulate different demand scenarios and identify the best supplier combination before placing orders.
 
-re, the platform compares the optimized cost with a 30-day baseline and explains the cost movement through a bridge-style visual.
-
-In the video, the optimized cost is shown as lower than the baseline, with the system attributing the improvement mainly to better supplier mix and merit-order-based procurement.
-
-This is a very important executive-level feature.
-
-It does not only say that the cost is lower. It explains why the cost is lower.
-
-The video also demonstrates simulation and supplier configuration, where a new supplier can be added with parameters such as quantity, cost, GCV, and other procurement-relevant values.
-
 The video then moves into the Coal Procurement Intelligence module.
 
 This section identifies optimal coal purchase windows and supports day-wise procurement predictions.
@@ -83,7 +73,5 @@ The model accuracy section provides confidence that the system is not just gener
 The procurement calendar view represents another practical planning layer.
 
 It allows NTPC teams to see procurement recommendations on a day-wise basis.
-
-This is valuable because coal procurement is operationally constrained by lead times, railway rake availability, unloading capacity, plant stock levels, weather disruptions, and supplier dispatch schedules.
 
 Overall, the video demonstrates a working version of the NTPC coal procurement and energy planning.
