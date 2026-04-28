@@ -4,7 +4,7 @@ Once inside the application, the user is taken to an integrated dashboard that b
 
 The objective here is to move beyond static Excel reporting and create a live decision environment where NTPC teams can monitor coal receipt, supplier contribution, landed cost, freight cost, and calorific value trends in one place.
 
-This directly supports the POC’s first objective: demand-based coal planning, where historical coal consumption, receipts, electricity generation, and plant-level demand are analyzed to forecast coal requirements across daily, monthly, quarterly, and annual planning horizons.
+This directly supports the demand-based coal planning, where historical coal consumption, receipts, electricity generation, and plant-level demand are analyzed to forecast coal requirements across daily, monthly, quarterly, and annual planning horizons.
 
 The visual charts help users quickly understand procurement patterns, supplier mix, and coal quality movement without manually preparing reports.
 
@@ -16,7 +16,7 @@ This is where the GenAI layer becomes important.
 
 The system interprets the user’s query, identifies the relevant data columns, selects the appropriate chart or analytical format, and generates insights automatically.
 
-This maps directly to the POC’s proposed on-demand chart generation flow, where the LLM understands the prompt, selects the right visualization type, generates the chart configuration, and renders the output instantly for the user.
+This maps directly to the on-demand chart generation flow, where the LLM understands the prompt, selects the right visualization type, generates the chart configuration, and renders the output instantly for the user.
 
 For NTPC, this means any planning, procurement, operations, or finance team member can generate insights simply by asking questions — without depending on manual Excel preparation or BI developers.
 
@@ -26,7 +26,7 @@ The platform processes the query and returns a summarized analytical response al
 
 This is important because coal procurement is not just a purchase function. It is directly connected to generation demand, plant load factor, boiler efficiency, coal quality, and inventory planning.
 
-The POC document highlights that coal requirement must be aligned with projected power generation loads at plant or unit level. The video demonstrates this exact concept by connecting coal consumption data with generation-side planning.
+The  coal requirement must be aligned with projected power generation loads at plant or unit level. The video demonstrates this exact concept by connecting coal consumption data with generation-side planning.
 
 This allows NTPC teams to answer questions such as:
 
@@ -48,35 +48,15 @@ At this stage, the video shifts from descriptive analytics to decision intellige
 
 The platform is no longer only showing what happened. It is beginning to recommend what should happen next.
 
-This is where NTPC GenBI v3.0 connects with the second major POC objective: coal cost optimization.
+This is where NTPC GenBI v3.0 connects with the coal cost optimization.
 
-The POC requires the AI system to determine the most suitable coal quantity, grade, blend ratio, and sourcing mix while considering plant efficiency, calorific value, freight cost, handling cost, supplier reliability, and emergency stock requirements.
+The AI system determines the most suitable coal quantity, grade, blend ratio, and sourcing mix while considering plant efficiency, calorific value, freight cost, handling cost, supplier reliability, and emergency stock requirements.
 
 The application reflects this by moving into coal procurement optimization and procurement intelligence modules.
 
 In the coal procurement optimization section, the user can select plant-level parameters, month, year, demand quantity, and supplier-related inputs.
 
-The purpose of this module is to identify the most cost-effective procurement plan while still respecting business constraints.
-
 This is not a simple lowest-price calculation.
-
-The optimization engine must evaluate multiple decision gates:
-
-Delivered coal cost.
-
-Supplier mix.
-
-Plant unloading capacity.
-
-Coal quality.
-
-Stock buffer.
-
-Risk tolerance.
-
-And operational feasibility.
-
-The POC document defines these decision gates clearly: profitability gate, capacity gate, buffer gate, and risk gate. The video shows how these gates can be operationalized inside the application.
 
 For NTPC, this means procurement teams can simulate different demand scenarios and identify the best supplier combination before placing orders.
 
@@ -88,15 +68,7 @@ This is a very important executive-level feature.
 
 It does not only say that the cost is lower. It explains why the cost is lower.
 
-The video also demonstrates supplier configuration, where a new supplier can be added with parameters such as quantity, cost, GCV, and other procurement-relevant values.
-
-This is a practical simulation capability.
-
-NTPC can use it to test how a new coal source, supplier, or procurement option would affect total cost, coal quality, and supply reliability before making a real-world procurement decision.
-
-This connects to the POC requirement of mapping each source point with coal price, GCV received, and transportation cost to identify the cheapest and most operationally suitable sourcing options.
-
-By allowing supplier-level simulation, the platform becomes a planning sandbox for procurement teams.
+The video also demonstrates simulation and supplier configuration, where a new supplier can be added with parameters such as quantity, cost, GCV, and other procurement-relevant values.
 
 The video then moves into the Coal Procurement Intelligence module.
 
@@ -106,7 +78,7 @@ This is where the application becomes more forward-looking.
 
 Instead of only analyzing historical data, the platform uses forecasting models to recommend when and how much coal should be procured.
 
-The model accuracy section provides confidence that the system is not just generating generic AI responses, but is being evaluated with measurable statistical performance.
+The model accuracy section provides confidence that the system is not just generating generic BI responses, but is being evaluated with measurable statistical performance.
 
 The procurement calendar view represents another practical planning layer.
 
@@ -114,4 +86,4 @@ It allows NTPC teams to see procurement recommendations on a day-wise basis.
 
 This is valuable because coal procurement is operationally constrained by lead times, railway rake availability, unloading capacity, plant stock levels, weather disruptions, and supplier dispatch schedules.
 
-Overall, the video demonstrates a working version of the NTPC coal procurement and energy planning POC.
+Overall, the video demonstrates a working version of the NTPC coal procurement and energy planning.
