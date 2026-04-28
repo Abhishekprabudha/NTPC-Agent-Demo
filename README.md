@@ -2,13 +2,13 @@
 
 A static HTML demo package for the NTPC Procurement Agent screen recording.
 
-This repo contains a 35% slower paced ~2 minute 18 second version of the original ~7 minute video, a matched narration MP3, and a final narrated MP4 export.
+This repo contains a 50% slower paced ~3 minute version of the original ~7 minute video, a matched narration MP3, and a final narrated MP4 export.
 
 ## Deliverables
 
 - `assets/ntpc-procurement-agent-demo-fast.mp4` — original fast-paced 90-second source video
-- `assets/ntpc-procurement-agent-demo-65pct-speed.mp4` — slowed video at 65% playback speed (~2:18)
-- `assets/demo-narration.mp3` — narration track aligned to the slowed ~2:18 runtime
+- `assets/ntpc-procurement-agent-demo-50pct-speed.mp4` — slowed video at 50% playback speed (~3:00)
+- `assets/demo-narration.mp3` — narration track aligned to the slowed ~3:00 runtime
 - `assets/ntpc-procurement-agent-demo-narrated.mp4` — final MP4 with narration muxed into the video
 - `assets/narration.txt` — editable narration script
 - `index.html` — local/static preview page
@@ -31,7 +31,7 @@ The narration positions the NTPC Procurement Agent as an AI decision cockpit for
 
 - Original uploaded recording: approximately 7 minutes 26 seconds
 - Fast-paced source output: exactly 90 seconds
-- Slowed narrated output target: approximately 2 minutes 18 seconds (35% slower playback)
+- Slowed narrated output target: approximately 3 minutes (50% slower playback)
 - Original speed-up factor used to produce the fast source: approximately 4.96×
 
 ## How to preview locally

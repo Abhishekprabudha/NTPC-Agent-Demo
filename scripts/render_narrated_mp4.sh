@@ -2,10 +2,10 @@
 set -euo pipefail
 
 SOURCE_VIDEO="assets/ntpc-procurement-agent-demo-fast.mp4"
-SLOWED_VIDEO="assets/ntpc-procurement-agent-demo-65pct-speed.mp4"
+SLOWED_VIDEO="assets/ntpc-procurement-agent-demo-50pct-speed.mp4"
 AUDIO="assets/demo-narration.mp3"
 OUTPUT="assets/ntpc-procurement-agent-demo-narrated.mp4"
-SPEED_REDUCTION_PERCENT="35"
+SPEED_REDUCTION_PERCENT="50"
 
 if command -v ffmpeg >/dev/null 2>&1; then
   FFMPEG_BIN="$(command -v ffmpeg)"
@@ -33,7 +33,7 @@ print(f"{1/(1-reduction/100):.6f}")
 PY
 )"
 
-echo "Creating slowed video at 65% speed (${SPEED_REDUCTION_PERCENT}% slower)..."
+echo "Creating slowed video at 50% speed (${SPEED_REDUCTION_PERCENT}% slower)..."
 "$FFMPEG_BIN" -y \
   -i "$SOURCE_VIDEO" \
   -an \
