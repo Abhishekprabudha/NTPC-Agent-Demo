@@ -2,13 +2,13 @@
 
 A static HTML demo package for the NTPC Procurement Agent screen recording.
 
-This repo contains a 50% slower paced ~3 minute version of the original ~7 minute video, a matched narration MP3, and a final narrated MP4 export.
+This repo contains a 25% speed (~6 minute) version of the original ~7 minute video, a matched narration MP3, and a final narrated MP4 export.
 
 ## Deliverables
 
 - `assets/ntpc-procurement-agent-demo-fast.mp4` — original fast-paced 90-second source video
-- `assets/ntpc-procurement-agent-demo-50pct-speed.mp4` — slowed video at 50% playback speed (~3:00)
-- `assets/demo-narration.mp3` — narration track aligned to the slowed ~3:00 runtime
+- `assets/ntpc-procurement-agent-demo-25pct-speed.mp4` — slowed video at 25% playback speed (~6:00)
+- `assets/demo-narration.mp3` — narration track aligned to the slowed ~6:00 runtime
 - `assets/ntpc-procurement-agent-demo-narrated.mp4` — final MP4 with narration muxed into the video
 - `assets/narration.txt` — editable narration script
 - `index.html` — local/static preview page
@@ -31,7 +31,7 @@ The narration positions the NTPC Procurement Agent as an AI decision cockpit for
 
 - Original uploaded recording: approximately 7 minutes 26 seconds
 - Fast-paced source output: exactly 90 seconds
-- Slowed narrated output target: approximately 3 minutes (50% slower playback)
+- Slowed narrated output target: approximately 6 minutes (25% playback speed / 75% slower)
 - Original speed-up factor used to produce the fast source: approximately 4.96×
 
 ## How to preview locally
@@ -46,7 +46,7 @@ Update `assets/narration.txt`, then run:
 python scripts/generate_narration.py
 ```
 
-The script defaults to a British female narration voice (`en-GB-LibbyNeural`) using `edge-tts`, with a slightly reduced speech rate for clarity on the slower video.
+The script defaults to a British female narration voice (`en-GB-LibbyNeural`) using `edge-tts`, with a reduced speech rate for clarity on the much slower video.
 If `edge-tts` is unavailable or fails, the script now exits by default (to avoid robotic narration in deliverables).
 
 If you explicitly want a fallback robotic track, run:
