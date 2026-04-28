@@ -6,7 +6,7 @@ const toggleNarrationBtn = document.getElementById("toggleNarration");
 const narrationStatus = document.getElementById("narrationStatus");
 
 let narrationEnabled = true;
-const TARGET_PLAYBACK_RATE = 0.5;
+const TARGET_PLAYBACK_RATE = 0.25;
 
 function setNarrationStatus(message) {
   narrationStatus.textContent = message;
