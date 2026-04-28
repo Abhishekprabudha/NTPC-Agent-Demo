@@ -6,6 +6,7 @@ const toggleNarrationBtn = document.getElementById("toggleNarration");
 const narrationStatus = document.getElementById("narrationStatus");
 
 let narrationEnabled = true;
+const TARGET_PLAYBACK_RATE = 0.5;
 
 function setNarrationStatus(message) {
   narrationStatus.textContent = message;
@@ -48,6 +49,8 @@ async function playNarrationFromCurrentTime(preferUserGesture = false) {
 
 async function startPlaybackFromBeginning(preferUserGesture = false) {
   video.currentTime = 0;
+  video.playbackRate = TARGET_PLAYBACK_RATE;
+
   if (narrationEnabled) {
     narrationAudio.currentTime = 0;
   }
@@ -79,6 +82,7 @@ toggleNarrationBtn.addEventListener("click", async () => {
 });
 
 video.addEventListener("play", () => {
+  video.playbackRate = TARGET_PLAYBACK_RATE;
   void playNarrationFromCurrentTime(false);
 });
 video.addEventListener("pause", () => narrationAudio.pause());
@@ -98,4 +102,5 @@ video.addEventListener("ended", () => {
   playBtn.textContent = "Replay narrated demo";
 });
 
+video.playbackRate = TARGET_PLAYBACK_RATE;
 setNarrationStatus(getNarrationEnabledMessage());
