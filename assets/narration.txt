@@ -1,7 +1,5 @@
 Welcome to NTPC Dashboard.
 
-Dashboard Overview
-
 Once inside the application, the user is taken to an integrated dashboard that brings together procurement, coal quality, supplier performance, and cost-related metrics.
 
 The objective here is to move beyond static Excel reporting and create a live decision environment where NTPC teams can monitor coal receipt, supplier contribution, landed cost, freight cost, and calorific value trends in one place.
@@ -9,8 +7,6 @@ The objective here is to move beyond static Excel reporting and create a live de
 This directly supports the POC’s first objective: demand-based coal planning, where historical coal consumption, receipts, electricity generation, and plant-level demand are analyzed to forecast coal requirements across daily, monthly, quarterly, and annual planning horizons.
 
 The visual charts help users quickly understand procurement patterns, supplier mix, and coal quality movement without manually preparing reports.
-
-Conversational Insights Mode
 
 The video then moves into the Comprehensive Insights Mode, where the user can ask business questions in natural language.
 
@@ -23,8 +19,6 @@ The system interprets the user’s query, identifies the relevant data columns, 
 This maps directly to the POC’s proposed on-demand chart generation flow, where the LLM understands the prompt, selects the right visualization type, generates the chart configuration, and renders the output instantly for the user.
 
 For NTPC, this means any planning, procurement, operations, or finance team member can generate insights simply by asking questions — without depending on manual Excel preparation or BI developers.
-
-Coal Consumption and Power Generation Analysis
 
 The user asks the system to analyze coal consumption and power generation for the NTPC Dadri plant.
 
@@ -44,21 +38,11 @@ Was the coal-to-generation relationship efficient?
 
 And are procurement decisions aligned with actual demand?
 
-Coal Quality and GCV Trend Analysis
-
 Next, the video demonstrates coal quality intelligence through GCV trend analysis.
 
 The user asks for daily GCV trends for a selected period, and the platform responds with a ranked or day-wise view of gross calorific value performance.
 
 This is a critical part of the project because GCV directly affects the amount of coal required for generation.
-
-Higher GCV coal may reduce the quantity needed, while lower GCV coal may increase consumption, handling load, and overall procurement cost.
-
-The POC specifically identifies GCV, moisture, ash, volatile matter, and grade as key coal quality parameters that feed into coal requirement calculation and blend optimization.
-
-By showing GCV trends inside the application, the video proves that the platform can help NTPC evaluate whether incoming coal quality is supporting plant efficiency or creating hidden cost pressure.
-
-From Dashboard to Decision Support
 
 At this stage, the video shifts from descriptive analytics to decision intelligence.
 
@@ -98,8 +82,6 @@ The POC document defines these decision gates clearly: profitability gate, capac
 
 For NTPC, this means procurement teams can simulate different demand scenarios and identify the best supplier combination before placing orders.
 
-Cost Root Cause Analysis
-
 The video then presents a Cost Root Cause Analysis screen.
 
 Here, the platform compares the optimized cost with a 30-day baseline and explains the cost movement through a bridge-style visual.
@@ -130,8 +112,6 @@ By allowing supplier-level simulation, the platform becomes a planning sandbox f
 
 They can test alternate supply strategies, compare supplier economics, and assess the impact of procurement decisions before committing to purchase orders.
 
-Coal Procurement Intelligence
-
 The video then moves into the Coal Procurement Intelligence module.
 
 This section identifies optimal coal purchase windows and supports day-wise procurement predictions.
@@ -146,8 +126,6 @@ This is important because the POC timeline includes development and testing of f
 
 The model accuracy section provides confidence that the system is not just generating generic AI responses, but is being evaluated with measurable statistical performance.
 
-Calendar View and Day-Wise Planning
-
 The procurement calendar view represents another practical planning layer.
 
 It allows NTPC teams to see procurement recommendations on a day-wise basis.
@@ -159,8 +137,6 @@ The POC specifically mentions emergency stock buffers of 10–20 days, route ris
 A calendar-based interface makes these decisions easier to operationalize.
 
 Instead of treating procurement as a monthly planning exercise only, NTPC teams can manage it as a rolling daily decision cycle.
-
-Project Value Summary
 
 Overall, the video demonstrates a working version of the NTPC coal procurement and energy planning POC.
 
